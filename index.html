@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enduring Grace | Custom Apparel</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/enduringgraceofficial/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@enduringgraceofficial"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+        <div class="scrolling-announcement">
+            <span>Welcome to Enduring Grace - Apparels & Customization</span>
+        </div>
+        
+        <div class="top-bar-right"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-left">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="Enduring Grace Logo" class="brand-logo">
+            </a>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="egdiary.html">The EG Diary</a></li>
+                <li><a href="pod.html">Print On Demand (POD)</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right"></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>UNLEASH THE POWER OF <br> CUSTOMIZATION WITH US!</h1>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn-primary">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="content-wrapper">
+<section class="section intro-section">
+    <h2 class="section-heading">What we do..</h2>
+    
+    <div class="video-placeholder" id="videoWrapper">
+        <div class="play-button" id="customPlayBtn"><i class="fas fa-play"></i></div>
+        
+        <video id="mainVideo" playsinline>
+            <source src="images/website-main-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <p class="intro-text">We at Enduring Grace offer customization solutions for various clients <br> wanting customized t-shirts, hoodies, sweatshirts, caps, etc. <br> <br> We offer good quality products and service at competitive prices. <br> We accept orders for minimum of 20 pieces and can <br> handle orders for 5,000+ pieces as well </p>
+</section>
+<script>
+    const videoWrapper = document.getElementById('videoWrapper');
+    const mainVideo = document.getElementById('mainVideo');
+    const playBtn = document.getElementById('customPlayBtn');
+
+    videoWrapper.addEventListener('click', function() {
+        if (mainVideo.paused) {
+            mainVideo.play();
+            playBtn.style.display = 'none'; // Hide play button when video runs
+        } else {
+            mainVideo.pause();
+            playBtn.style.display = 'flex'; // Bring play button back when paused
+        }
+    });
+
+    // Also ensures the button comes back up if the video finishes playing
+    mainVideo.addEventListener('ended', function() {
+        playBtn.style.display = 'flex';
+    });
+</script>
+        
+    <div class="why-choose-us-accordion"> 
+        <section class="section accordion-section bg-gray">
+            <h2 class="section-heading">Why would you choose us as your clothing supplier?</h2>
+            
+                <div class="accordion-container">
+                
+                <details class="accordion-item">
+                    <summary>
+                        <span class="trigger-left">
+                            <i class="far fa-eye"></i>
+                            Eye for Customer Needs
+                        </span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Our team always prioritizes to understand the need of our clients, which helps to offer better and apt products & solutions to them.</p>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary>
+                        <span class="trigger-left">
+                            <i class="far fa-check-square"></i>
+                            Professionalism
+                        </span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>At Enduring Grace, we approach everything from start to end, in a systematic and organized way.</p>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary>
+                        <span class="trigger-left">
+                            <i class="far fa-clipboard"></i>
+                            Transparency
+                        </span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Enduring Grace believes in working with transparency and honesty. This helps in avoiding errors or assumable disputes and instills trust.</p>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary>
+                        <span class="trigger-left">
+                            <i class="far fa-question-circle"></i>
+                            Proper Product Knowledge
+                        </span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </summary>
+                    <div class="accordion-content">
+    <p>Our team understands the product they are selling to the customers which results in better</p>
+    
+    <ul class="product-knowledge-list">
+        <li>customer satisfaction and</li>
+        <li>smoother supply chain.</li>
+    </ul> 
+</div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary>
+                        <span class="trigger-left">
+                            <i class="fas fa-tshirt"></i>
+                            Design & Printing Solutions
+                        </span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Our customers not only get our core products, but also get efficient design and printing solutions under one roof, which makes their work a lot more easier and cost effective.</p>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary>
+                        <span class="trigger-left">
+                            <i class="fas fa-truck"></i>
+                            Efficient Shipping
+                        </span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>We ship our products to customers All Over India which helps them to carry on their business activities without having to spend time and money in traveling or worrying about logistics.</p>
+                    </div>
+                
+                </details>
+            </div>   
+        </section>
+    </div>
+
+        <section class="section products-section">
+            <h2 class="section-heading left-align">What we deal in?</h2>
+            
+            <div class="products-grid">
+                
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="images/round-neck.jpg" alt="Adult Round Necks / V Necks">
+                    </div>
+                    <div class="card-details">
+                        <h3>ADULT ROUND NECKS / V NECKS</h3>
+                        <div class="card-text">
+                            <strong>Ready Stock:</strong>
+                            <ul>
+                                <li><strong>Regular Fit</strong> - Unisex in different colors and sizes</li>
+                                <li><strong>Oversized Fit</strong> - Unisex in Black and White colors</li>
+                            </ul>
+                            <strong>Made to Order:</strong>
+                            <p>We also undertake customized t-shirt orders with different fabrics, colors, fits and pattern.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="images/polo-shirt.jpg" alt="Adult Polos / Collar T-Shirts">
+                    </div>
+                    <div class="card-details">
+                        <h3>ADULT POLOS / COLLAR T-SHIRTS</h3>
+                        <div class="card-text">
+                            <strong>Ready Stock:</strong>
+                            <p><strong>Regular Fit</strong> - Unisex in different color and sizes</p>
+                            
+                            <strong>Made to Order:</strong>
+                            <p>We also undertake customized t-shirt orders with different fabrics, colors, fits and pattern.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="images/kids-necks.jpg" alt="Kids Round Necks">
+                    </div>
+                    <div class="card-details">
+                        <h3>KIDS ROUND NECKS</h3>
+                        <div class="card-text">
+                            <strong>Ready Stock:</strong>
+                            <p><strong>Regular Fit</strong> - In different color and sizes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="images/sweatshirts.jpg" alt="Sweatshirts">
+                    </div>
+                    <div class="card-details">
+                        <h3>SWEATSHIRTS</h3>
+                        <div class="card-text">
+                            <p>Sweatshirts are a made to order range and can be made in different fabrics, colors and sizes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="images/hoodies.jpg" alt="Hoodies">
+                    </div>
+                    <div class="card-details">
+                        <h3>HOODIES</h3>
+                        <div class="card-text">
+                            <p>Hoodies are a custom made range for which 280 GSM+ Fabrics are used. Wide range of colors are available</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="images/caps.jpg" alt="Caps">
+                    </div>
+                    <div class="card-details">
+                        <h3>CAPS</h3>
+                        <div class="card-text">
+                            <p>We undertake orders for caps with customization for corporate events, seminars, exhibitions and picnics</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Usual Clients</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="clients-section">
+        <h2 class="section-title">Our usual clients..</h2>
+        
+        <div class="clients-container">
+            
+            <div class="client-row">
+                <div class="client-visual">
+                    <img src="images/corporates.jpg" alt="Corporate T-Shirts">
+                </div>
+                <div class="client-text">
+                    <span class="row-number">1</span>
+                    <h3>CORPORATES</h3>
+                    <p>We have worked with many corporate companies that trust us with their requirements because :</p>
+                    <ul>
+                        <li>We are able to understand their actual requirement without taking a lot of their time and efforts</li>
+                        <li>Offering apt mock ups and other service which helps in proper decision making</li>
+                        <li>Being able to give high quality fabrics with proper stitching and fitting</li>
+                        <li>Delivering the products at the committed timeline, which is very much appreciated in the corporate sector</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="client-row reverse">
+                <div class="client-visual">
+                    <img src="images/printers-work.jpg" alt="Heat press printing work">
+                </div>
+                <div class="client-text">
+                    <span class="row-number">2</span>
+                    <h3>PRINTERS</h3>
+                    <p>We have ready stock of plain t-shirts made in good quality fabric with satisfactory stitching and fitting.</p>
+                    <p>The ready stock range consists of :</p>
+                    <ul>
+                        <li>Round Neck T-Shirts (Regular Fit and Oversized Fit)</li>
+                        <li>Polo Neck T-Shirts</li>
+                        <li>Kids T-Shirts - Round Neck</li>
+                    </ul>
+                    <p>The ready stock range allows printers to focus on their core work of printing without having to invest in ready stock of t-shirts.</p>
+                    <p>Also, it allows them to fulfill orders which are timebound or urgent and can't be put into manufacturing process.</p>
+                </div>
+            </div>
+
+            <div class="client-row">
+                <div class="client-visual">
+                    <img src="images/clothing-brands.jpg" alt="Clothing Brand Apparel">
+                </div>
+                <div class="client-text">
+                    <span class="row-number">3</span>
+                    <h3>CLOTHING BRANDS</h3>
+                    <p>We are experienced in catering to clothing brands that need apparels like round neck t-shirts, polos, hoodies and sweatshirts with their own brand name and designs.</p>
+                    <p>Clothing brands are happy with us because:</p>
+                    <ul>
+                        <li>We offer manufacturing customisation which is important in a clothing brand.</li>
+                        <li>We offer printing / embroidery services as well which makes the production process easier.</li>
+                        <li>We offer a wide range of color and fabric options with reasonable prices and low MOQs.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="client-row reverse">
+                <div class="client-visual">
+                    <img src="images/institutions.jpg" alt="Institution Apparel">
+                </div>
+                <div class="client-text">
+                    <span class="row-number">4</span>
+                    <h3>INSTITUTIONS</h3>
+                    <p>Enduring Grace has catered to institutions like the</p>
+                    <ul>
+                        <li>Institute of Chartered Accountants of India (I.C.A.I.), Mumbai Chapter</li>
+                        <li>Institute of Information Technology (I.I.T.), Vadodara</li>
+                        <li>H.R. College, Churchgate</li>
+                        <li>Ruia College, Matunga</li>
+                        <li>and many such other institutions.</li>
+                    </ul>
+                    <p>They all have been satisfied and happy with our products and services.</p>
+                </div>
+            </div>
+
+            <div class="client-row">
+                <div class="client-visual">
+                    <img src="images/businesses.jpg" alt="Business Uniforms">
+                </div>
+                <div class="client-text">
+                    <span class="row-number">5</span>
+                    <h3>BUSINESSES</h3>
+                    <p>We also cater to different types of business like:</p>
+                    <ul>
+                        <li>Academies</li>
+                        <li>Restaurants</li>
+                        <li>Hotels</li>
+                        <li>Manufacturing Units</li>
+                        <li>Modular Kitchen Business</li>
+                        <li>Electrical Fitting Businesses</li>
+                        <li>Businesses dealing into Carpet</li>
+                        <li>and many such other businesses</li>
+                    </ul>
+                    <p>We have been able to satisfy all of them with good service.</p>
+                </div>
+            </div>
+
+            <div class="client-row reverse">
+                <div class="client-visual">
+                    <img src="images/manufacturing-unit.jpg" alt="Apparel manufacturing factory floor">
+                </div>
+                <div class="client-text">
+                    <span class="row-number">6</span>
+                    <h3>OVERSEAS CUSTOMERS</h3>
+                    <p>We cater to overseas customers with a range of good quality fabrics and other customization services.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Do We Customize</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="customization-section">
+        <h2 class="section-title">How do we customize?</h2>
+        
+        <div class="customization-grid">
+            
+            <div class="custom-col">
+                <h3>DTF (Direct to Film)<br>PRINTING</h3>
+                <p>We offer customization via High Quality DTF Printing. These serves customers:</p>
+                <ul>
+                    <li>Who wish to print complicated and color rich designs,</li>
+                    <li>Who need to print lesser quantities,</li>
+                    <li>If the designs are intricate and need more precision.</li>
+                </ul>
+                <p>The printing is done at high settings using good quality sheets and inks. Personal attention is given at the time of printing.</p>
+            </div>
+
+            <div class="custom-col">
+                <h3>SCREEN PRINTING</h3>
+                <p>Screen Printing Method is relatively used since a long time in the customization business. We offer Good Quality Screen Printing Customisation Service for customers who have:</p>
+                <ul>
+                    <li>Simple designs with limited color combinations,</li>
+                    <li>More quantities per design,</li>
+                    <li>Needs economy of price.</li>
+                </ul>
+                <p>We do not compromise on the paints or fusing methods due to which the feel, life and after wash results of the print are satisfactory.</p>
+            </div>
+
+            <div class="custom-col">
+                <h3>EMBROIDERY</h3>
+                <p>Embroidery is a common form of customization that we offer to a lot of our clients. It is subjective and preferred by customers:</p>
+                <ul>
+                    <li>Who wish to have a more premium look in their t-shirts,</li>
+                    <li>The designs are usually logos and not very complicated,</li>
+                    <li>The quantities are reasonable enough to obtain a decent price.</li>
+                </ul>
+                <p>We offer embroidery service majorly to our corporates clients and they are satisfied with it since we do it using high end automated machines.</p>
+            </div>
+
+            <div class="custom-col">
+                <h3>STITCHING</h3>
+                <p>We also customize via stitching or manufacturing process when the client has a specific requirement that can be done only by making the t-shirts from scratch.</p>
+                <p>To be able to process the orders for manufacturing process, a lot of factors are considered like:</p>
+                <ul>
+                    <li>Order quantities</li>
+                    <li>Manufacturing and Delivery Timelines.</li>
+                    <li>Any specific requirement that can only be done on unstitched tshirts.</li>
+                    <li>Any specific fabric requirement which is not available in ready made t-shirts.</li>
+                </ul>
+                <p>Hence, we are able to satisfy our clients since we have the option of manufacturing which gives flexibility and more scope of creativity.</p>
+            </div>
+
+        </div>
+    </section>
+
+<section class="yt-showcase-section">
+    <div class="yt-content-container">
+        
+        <h2 class="yt-section-title">Our Presence on YouTube</h2>
+        
+        <div class="yt-accordion-list">
+
+            <details class="yt-accordion-item">
+                <summary class="yt-accordion-header">
+                    <span class="yt-header-left">
+                        <i class="far fa-eye"></i> Video 4
+                    </span>
+                    <i class="fas fa-chevron-down yt-arrow"></i>
+                </summary>
+                <div class="yt-accordion-content">
+                    <div class="yt-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/kr48QFdwFeE?si=1kbjuctF5jhRmsAG" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </details>
+
+            <details class="yt-accordion-item">
+                <summary class="yt-accordion-header">
+                    <span class="yt-header-left">
+                        <i class="far fa-eye"></i> Video 3
+                    </span>
+                    <i class="fas fa-chevron-down yt-arrow"></i>
+                </summary>
+                <div class="yt-accordion-content">
+                    <div class="yt-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/4BUfkYdyTPQ?si=D9jLLNyAwP0BX7t_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </details>
+
+            <details class="yt-accordion-item">
+                <summary class="yt-accordion-header">
+                    <span class="yt-header-left">
+                        <i class="far fa-eye"></i> Video 2
+                    </span>
+                    <i class="fas fa-chevron-down yt-arrow"></i>
+                </summary>
+                <div class="yt-accordion-content">
+                    <div class="yt-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/or3IaC3eTgM?si=D7pWZXk-zm480WQm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </details>
+
+            <details class="yt-accordion-item">
+                <summary class="yt-accordion-header">
+                    <span class="yt-header-left">
+                        <i class="far fa-eye"></i> Video 1
+                    </span>
+                    <i class="fas fa-chevron-down yt-arrow"></i>
+                </summary>
+                <div class="yt-accordion-content">
+                    <div class="yt-video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/3DsPIaFjfzA?si=jPOJWT6lBMPI68iu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </details>
+            <details class="yt-accordion-item">
+    <summary class="yt-accordion-header">
+        <span class="yt-header-left">
+            <i class="far fa-clipboard"></i> Our Channel
+        </span>
+        <i class="fas fa-chevron-down yt-arrow"></i>
+    </summary>
+    <div class="yt-accordion-content">
+        <a href="https://www.youtube.com/@enduringgraceofficial" target="_blank" class="yt-channel-link">View Our Channel</a>
+    </div>
+</details>
+
+        </div>
+    </div>
+</section>
+<div class="custom-pod-section">
+    <div class="pod-container">
+        <div class="pod-visual-box">
+            <img src="images/pod-model-diagram.png" alt="The Print on Demand Model Diagram">
+        </div>
+        <div class="pod-text-box">
+            <h2>PRINT ON DEMAND (POD)</h2>
+            <p>We offer Print on Demand (POD) service to clothing brands using good quality t-shirts, prints and shipping service. </p>
+            <a href="#" class="know-more-btn">Know More</a>
+        </div>
+
+    </div>
+</div>
+
+<footer class="custom-site-footer">
+    <div class="footer-container">
+        
+        <div class="footer-links-title">Quick links</div>
+        <div class="footer-links-grid">
+            <a href="index.html">Home</a>
+            <a href="egdiary.html">The EG Diary</a>
+            <a href="pod.html">Print On Demand</a>
+            <a href="about.html">About Us</a>
+        </div>
+
+        <div class="footer-social-centered">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/enduringgraceofficial/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@enduringgraceofficial" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-thin-line"></div>
+
+        <div class="footer-copyright-legal-row">
+            <div class="copyright-text">
+                © 2026, Enduring Grace
+            </div>            
+            
+            <div class="footer-legal-container">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>            
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

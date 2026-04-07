@@ -1,0 +1,1850 @@
+/* --- Global Styles --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body { 
+    background-color: #fff; 
+    color: #333; 
+    line-height: 1.6; 
+}
+
+/* --- Top Utility Bar --- */
+.top-bar { 
+    background: #f1f1f1; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 8px 40px; 
+    font-size: 14px; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.social-icons a { 
+    color: #333; 
+    margin-right: 15px; 
+    text-decoration: none; 
+    font-size: 14px;
+}
+
+.scrolling-announcement {
+    font-weight: 500;
+}
+
+/* --- Header & Navigation --- */
+.main-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 40px; 
+}
+
+/* Give the center nav menu more proportional width to prevent crowding */
+.header-left, .header-right { 
+    flex: 1; 
+}
+
+.nav-menu {
+    flex: 2; /* Allows the menu more space to breathe horizontally */
+}
+
+.header-left { 
+    display: flex; 
+    justify-content: flex-start; 
+}
+
+.brand-logo { 
+    max-height: 45px; 
+}
+
+.nav-menu ul { 
+    display: flex; 
+    list-style: none; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.nav-menu ul li { 
+    margin: 0 18px; /* Balanced spacing between items */
+}
+
+.nav-menu ul li a { 
+    text-decoration: none; 
+    color: #555; 
+    font-size: 14px; 
+    position: relative; 
+    padding-bottom: 5px; 
+    white-space: nowrap; /* CRITICAL: This stops multi-word links from wrapping */
+    display: inline-block;
+}
+
+.nav-menu ul li a::after { 
+    content: ''; 
+    position: absolute; 
+    width: 0; 
+    height: 2px; 
+    bottom: 0; 
+    left: 0; 
+    background: #111; 
+    transition: 0.3s; 
+}
+
+.nav-menu ul li a:hover::after { 
+    width: 100%; 
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .nav-menu ul {
+        flex-wrap: wrap; /* Allows wrapping ONLY on small tablets to prevent cutting off */
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* --- Hero Section --- */
+.hero { 
+    height: 70vh; 
+    background: url('images/herobanner.jpg') center/cover no-repeat; 
+    position: relative; 
+}
+
+.hero-overlay { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.4); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #fff; 
+    text-align: center; 
+}
+
+.hero-content h1 { 
+    font-size: 30px; 
+    margin-bottom: 20px; 
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.btn-primary { 
+    background: #8B1E2B; 
+    color: #fff; 
+    padding: 12px 30px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    display: inline-block; 
+    transition: 0.3s; 
+}
+
+.btn-primary:hover { 
+    background: #6d1822; 
+}
+
+/* --- Main Layout Defaults --- */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 28px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-heading.left-align {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    font-size: 24px;
+}
+
+.bg-gray {
+    background-color: #f9f9f9;
+}
+
+/* --- Intro Video Section --- */
+.intro-section .intro-text {
+    color: #555; /* Replace this hex code with your preferred color */0
+}
+/* --- Centered and Scaled What We Do Video (with subtle shadow) --- */
+.intro-section .video-placeholder {
+    position: relative;
+    width: 100%;
+    max-width: 700px; /* Reduced width to make the video box smaller */
+    margin: 0 auto 30px auto; /* "auto" left and right forces it to the screen center */
+    overflow: hidden;
+    border-radius: 8px; /* Smooth rounded corners */
+    background: #000; /* Black background fallback while loading */
+    cursor: pointer;
+    
+    /* --- NEW: Subtle Shadow --- */
+    /* Horizontal offset (0px), Vertical offset (4px), Blur (12px), Spread (-8px) */
+    box-shadow: 0 4px 12px -1px rgba(31, 31, 31, 0.466); 
+    
+    /* Optional: Improves rendering smoothness during hover/transition */
+    will-change: box-shadow; 
+    transition: box-shadow 0.2s ease;
+}
+
+/* Subtle effect: Light shadow brightens slightly on hover */
+.intro-section .video-placeholder:hover {
+    box-shadow: 0 6px 16px -1px rgba(0, 0, 0, 0.2); 
+}
+
+.intro-section .video-placeholder video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; 
+}
+
+/* Play button floating perfectly centered over the video */
+.intro-section .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+/* Subtle hover effect for the button */
+.intro-section .video-placeholder:hover .play-button {
+    background: rgba(255, 0, 0, 0.8); /* Turns YouTube red on hover */
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* --- Accordion Section (Image 3.jpg Integration) --- */
+.why-choose-us-accordion .accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    }
+.why-choose-us-accordion .accordion-item {
+    display: block; /* CRITICAL: This forces the margin to actually create physical gaps */
+    background-color: #000000; /* Dark charcoal background as seen in your reference */
+    margin-bottom: 15px !important; /* Forces the gaps between containers */
+    border: none; 
+    border-radius: 6px; /* Smooth rounded edges on the bars */
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.why-choose-us-accordion .accordion-item {
+    background-color: #1a1a1a
+}
+.why-choose-us-accordion .accordion-item summary {
+    background-color: #1a1a1a !important;
+}
+.why-choose-us-accordion .accordion-item summary:active,
+.why-choose-us-accordion .accordion-item summary:focus {
+    background-color: #1a1a1a !important;
+}
+/* Targets only the bullets inside the Proper Product Knowledge dropdown */
+.why-choose-us-accordion .accordion-content ul.product-knowledge-list li {
+    color: #c7c7c7; /* Replace with your desired hex color code */
+}
+summary {
+    display: flex;
+    background-color: #000000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px; 
+    cursor: pointer;
+    list-style: none;
+    color: #ffffff; /* Crisp white text against the dark bar */
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.trigger-left {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.trigger-left i {
+    width: 24px; 
+    margin-right: 15px;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.arrow {
+    font-size: 12px;
+    opacity: 0.7;
+    transition: transform 0.2s ease;
+}
+
+[open] .arrow {
+    transform: rotate(180deg);
+}
+
+.why-choose-us-accordion .accordion-content {
+    padding: 0 25px 25px 64px; 
+}
+
+.why-choose-us-accordion .accordion-content p {
+    color: #c7c7c7;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- Products Grid Section --- */
+.products-section {
+    padding: 60px 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-card {
+    background-color: #f7f7f7; /* Very light gray card container */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image img {
+    padding-top: 15px;
+    width: 100%;
+    height: 300px;
+    object-fit: contain; 
+    display: block;
+}
+
+.card-details {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-details h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    color: #111;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.card-text strong {
+    color: #333;
+}
+
+.card-text p {
+    margin-bottom: 15px;
+}
+
+.card-text ul {
+    list-style: disc;
+    margin-left: 18px;
+    margin-bottom: 15px;
+}
+
+.card-text li {
+    margin-bottom: 4px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+    }
+    .nav-menu ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .products-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+/* --- Global Reset & Fonts --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* --- Section Container --- */
+.clients-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #111;
+}
+
+/* --- Row Structural Layout --- */
+.clients-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-row {
+    display: flex;
+    background-color: #ffffff;
+    align-items: stretch; /* Forces equal height for text and image blocks */
+}
+
+/* Alternating flip layout */
+.client-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.client-visual, .client-text {
+    flex: 1;
+    width: 50%;
+}
+
+/* --- Text Block Styling --- */
+.client-text {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.row-number {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.client-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.client-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.client-text ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.client-text li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+/* Custom bullet points */
+.client-text li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Remove margin on last elements of content block */
+.client-text p:last-child,
+.client-text ul:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Visual Block Styling (Cleaned up for single image) --- */
+.client-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image fills the space without stretching */
+    display: block;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .client-text {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .client-row, .client-row.reverse {
+        flex-direction: column; /* Stacks vertically on mobile */
+    }
+    
+    .client-visual, .client-text {
+        width: 100%;
+    }
+    
+    .client-visual {
+        height: 350px; /* Gives images a nice fixed height on stacked mobile screens */
+    }
+}
+/* --- Global Reset & Fonts --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* --- Section Container --- */
+.customization-section {
+    max-width: 1350px; 
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: left;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #111;
+    padding-left: 5px;
+}
+
+/* --- 4-Column Grid Layout --- */
+.customization-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; 
+    align-items: stretch;
+}
+
+/* --- Individual Column Styling (With Shadow) --- */
+.custom-col {
+    background-color: #f7f7f7; 
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    
+    /* Added light rounded corners for the shadow to wrap around nicely */
+    border-radius: 2px; 
+    
+    /* Added a light, soft drop shadow */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05), 0 0.5px 1.5px rgba(0, 0, 0, 0.03);
+    
+    /* Smooth transition in case you want to add hover effects later */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Optional: Slight lift effect when hovering over a column */
+.custom-col:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.custom-col h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    color: #111;
+    line-height: 1.4;
+    min-height: 45px; 
+}
+
+.custom-col p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #6c757d; 
+    margin-bottom: 15px;
+}
+
+.custom-col ul {
+    list-style: none;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.custom-col li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #6c757d; 
+    position: relative;
+    padding-left: 24px; 
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Clear, defined, pure black square bullets */
+.custom-col li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px; 
+    width: 6px;
+    height: 6px;
+    background-color: #000000; 
+    border-radius: 1px;
+}
+
+/* Remove bottom margin on the final child elements */
+.custom-col p:last-child,
+.custom-col ul:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Responsive Layout Breaks --- */
+
+@media (max-width: 1024px) {
+    .customization-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .custom-col h3 {
+        min-height: auto; 
+    }
+}
+
+@media (max-width: 600px) {
+    .customization-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+/* ==========================================================================
+   STRICTLY ISOLATED YOUTUBE SECTION (Styled exactly to Image 8.png)
+   ========================================================================== */
+
+/* Outer grey layout background */
+.yt-showcase-section {
+    background-color: #f5f5f5 !important; 
+    padding: 80px 20px; /* Changed 0px to 20px so text doesn't hit the edges on mobile */
+    
+    width: 90%; /* On small screens, it takes up 90% of the screen width */
+    max-width: 1315px; /* On large screens, it stops expanding at 800px */
+    
+    margin: 0 auto; /* This forces the left and right margins to be equal, centering the box */
+    
+    border-radius: 8px; /* Optional: Adds smooth rounded corners since the box edges are now visible */
+}
+
+/* Constrained centered container */
+.yt-showcase-section .yt-content-container {
+    max-width: 650px !important; 
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+/* Section Title */
+.yt-showcase-section .yt-section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+.yt-showcase-section .yt-accordion-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Making bars transparent and flat against the background */
+.yt-showcase-section .yt-accordion-item {
+    background-color: transparent !important;
+    background: transparent !important;
+    border-bottom: 1px solid #e0e0e0 !important; /* The thin dividing line */
+    overflow: hidden;
+    box-shadow: none !important; /* Removing all outer glow/shadows */
+    border-radius: 0 !important;
+}
+
+/* The actual clickable header strip */
+.yt-showcase-section .yt-accordion-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 22px 10px !important; /* Perfected line padding */
+    cursor: pointer;
+    list-style: none !important;
+    background-color: transparent !important;
+}
+
+/* Removing browser default highlight markers */
+.yt-showcase-section .yt-accordion-header::-webkit-details-marker {
+    display: none !important;
+}
+
+.yt-showcase-section .yt-header-left {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400; /* Regular weight matching the text from the image */
+    color: #555;
+}
+
+/* Icon layout alignment */
+.yt-showcase-section .yt-header-left i {
+    width: 24px;
+    margin-right: 12px;
+    font-size: 16px;
+    text-align: center;
+    color: #444; /* Clean dark grey icons */
+}
+
+/* Downward indicator arrow */
+.yt-showcase-section .yt-arrow {
+    font-size: 10px;
+    color: #888;
+    transition: transform 0.2s ease;
+}
+
+/* Rotates the tiny arrow up when clicked open */
+.yt-showcase-section .yt-accordion-item[open] .yt-arrow {
+    transform: rotate(180deg);
+}
+
+/* Expanding content area */
+.yt-showcase-section .yt-accordion-content {
+    padding: 0 10px 25px 46px; /* Left indent matching text start */
+}
+
+/* --- Independent Responsive Video Frame --- */
+.yt-showcase-section .yt-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Perfect 16:9 widescreen ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 4px; 
+}
+
+.yt-showcase-section .yt-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/* ==========================================================================
+   STRICTLY ISOLATED POD & FOOTER SECTION
+   ========================================================================== */
+
+/* --- POD Upper Section --- */
+.custom-pod-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.custom-pod-section .pod-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Splits screen perfectly in half */
+    gap: 60px;
+    align-items: center;
+}
+
+.custom-pod-section .pod-visual-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.custom-pod-section .pod-text-box {
+    padding-left: 20px;
+}
+
+.custom-pod-section .pod-text-box h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.custom-pod-section .pod-text-box p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+/* Black CTA Button Style */
+.custom-pod-section .know-more-btn {
+    display: inline-block;
+    background-color: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 14px 40px;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease;
+}
+
+.custom-pod-section .know-more-btn:hover {
+    background-color: #333333;
+}
+
+
+/* --- Clean Site Footer --- */
+.custom-site-footer {
+    background-color: #ffffff;
+    padding: 60px 0 30px 0;
+    border-top: 1px solid #ebebeb; /* Subtle divide between body and footer */
+    width: 100%;
+}
+
+.custom-site-footer .footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.custom-site-footer .footer-links-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+/* Flex wrap layout to perfectly replicate screen text flow */
+.custom-site-footer .footer-links-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-bottom: 50px;
+}
+
+.custom-site-footer .footer-links-grid a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.custom-site-footer .footer-links-grid a:hover {
+    color: #111;
+}
+
+/* --- Centered Social Media Icons --- */
+.footer-social-centered {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.footer-social-centered a {
+    color: #111;
+    font-size: 18px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer-social-centered a:hover {
+    opacity: 0.7;
+}
+
+/* --- Thin Elegant Line --- */
+.footer-thin-line {
+    width: 100%;
+    height: 1px;
+    background-color: #ebebeb; /* Light grey for an elegant, non-intrusive look */
+    margin-bottom: 20px;
+}
+
+/* --- Bottom Row: Left and Right Alignment --- */
+.footer-copyright-legal-row {
+    display: flex;
+    justify-content: space-between; /* Pushes copyright to the left and policies to the right */
+    align-items: center;
+    font-size: 11px;
+    color: #777;
+}
+
+.footer-copyright-legal-row .copyright-text {
+    font-size: 11px;
+}
+
+.footer-legal-container {
+    display: flex;
+    gap: 15px; /* Spaces out the 3 policies */
+}
+
+.footer-legal-container a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-legal-container a:hover {
+    color: #111;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+    /* Stacks the copyright and policies vertically on mobile */
+    .footer-copyright-legal-row {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    /* Centers the legal links horizontally on mobile screens */
+    .footer-legal-container {
+        justify-content: center;
+        flex-wrap: wrap; /* Prevents text overflow on ultra-small screens */
+        gap: 10px 15px;
+    }
+}
+
+
+
+/* ==========================================================================
+   ISOLATED CONTACT DETAILS PAGE STYLING (Matches Screenshot)
+   ========================================================================== */
+
+/* CRITICAL FIX: This forces the contact content to clear the header float */
+.isolated-contact-wrapper {
+    background-color: #ffffff;
+    padding: 80px 0;
+    width: 100%;
+    display: block; /* Overrides any accidental parent flex pushing */
+    clear: both;   /* Guarantees a fresh line on the browser grid */
+}
+
+.contact-details-section {
+    max-width: 850px; /* Aligns comfortably on center screen */
+    margin: -20px auto;
+    padding: 0 40px;
+    text-align: left; /* Strict left alignment from the image */
+}
+
+/* Large off-black Contact title */
+.contact-details-section .contact-main-title {
+    font-size: 34px;
+    font-weight: 400;
+    color: #222222;
+    margin-bottom: 25px;
+}
+
+/* Gray lead paragraph */
+.contact-details-section .contact-intro-lead {
+    font-size: 15px;
+    color: #666666;
+    margin-bottom: 30px;
+    letter-spacing: 0.3px;
+}
+
+/* The standard unordered list structure */
+.contact-details-section .contact-info-list {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.contact-details-section .contact-info-list li {
+    font-size: 15px;
+    color: #666666;
+    position: relative;
+    padding-left: 28px; /* Room for the clean bullet points */
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+/* Clean, perfectly rounded dark grey bullet points */
+.contact-details-section .contact-info-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    background-color: #444444;
+    border-radius: 50%;
+}
+
+.contact-details-section .contact-info-list .label {
+    margin-right: 6px;
+}
+
+/* Specific left-indented block used exclusively for your physical address */
+.contact-details-section .address-block {
+    margin-top: 18px;
+    padding-left: 20px;
+    color: #666666;
+}
+
+/* Underlined gray map link */
+.contact-details-section .contact-info-list a {
+    color: #666666;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.contact-details-section .contact-info-list a:hover {
+    color: #111111;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .contact-details-section {
+        padding: 0 20px;
+    }
+    .contact-details-section .contact-main-title {
+        font-size: 32px;
+}
+}
+/* This will only apply to the contact page because the class isn't used anywhere else */
+.contact-page-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+.about-page-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+.egdiary-page-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+.pod-page-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+
+1-page-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+
+2-page-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+
+privacy-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+
+terms-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+
+
+
+/* --- Global Reset for the Wrapper --- */
+.about-content-only * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Scoped Typography & Layout --- */
+.about-content-only {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    /* Soft charcoal/grey text color from your screenshot */
+    color: #414141; 
+    line-height: 1.8;
+    font-weight: 300; 
+    font-size: 17px;
+}
+
+.about-content-only .content-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.about-content-only .main-heading {
+    font-size: 34px;
+    font-weight: 400;
+    color: #222222;
+    margin-bottom: 25px;
+}
+
+.about-content-only .sub-heading {
+    font-size: 19px;
+    font-weight: 700;
+    color: #444444; 
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.about-content-only p {
+    margin-bottom: 20px;
+}
+
+/* Link Styling */
+.about-content-only a {
+    color: #333333;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.about-content-only a:hover {
+    color: #000000;
+}
+
+/* --- Image Styling --- */
+.about-content-only .framed-image-container {
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 35px auto;
+    max-width: fit-content;
+}
+
+.about-content-only .info-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Custom List Styling for Filled Rounded Bullets --- */
+.about-content-only .custom-list {
+    list-style-type: none;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.about-content-only .custom-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #414141;
+}
+
+/* Creates black, filled, clearly rounded bullets */
+.about-content-only .custom-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px; 
+    width: 5px; 
+    height: 5px;
+    background-color: #333333; 
+    border-radius: 50%;
+}
+
+/* --- Signature Block Styling --- */
+.about-content-only .signature-block {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #1d1d1d;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.about-content-only .signature-block p {
+    margin-bottom: 5px;
+}
+
+/* --- Global Reset for the Wrapper --- */
+.pod-content-only * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Scoped Typography & Layout --- */
+.pod-content-only {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    /* Soft charcoal/grey text color borrowed from your about page */
+    color: #414141; 
+    line-height: 1.8;
+    font-weight: 300; 
+    font-size: 15px;
+}
+
+/* Centered container with a narrow width to match the screenshot flow */
+.pod-content-only .content-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Title styling, size, placement and gapping same as About Us page */
+.pod-content-only .main-heading {
+    font-size: 34px;
+    font-weight: 400;
+    color: #222222;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Sub-headings matching About Us with bolding and underlines */
+.pod-content-only .sub-heading {
+    font-size: 17px;
+    font-weight: 700;
+    color: #444444; 
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.pod-content-only p {
+    margin-bottom: 20px;
+}
+
+/* Link Styling */
+.pod-content-only a {
+    color: #333333;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.pod-content-only a:hover {
+    color: #000000;
+}
+
+/* Bold text slightly darkened for scannability */
+.pod-content-only strong {
+    font-weight: 600;
+    color: #444;
+}
+
+/* --- Custom List Styling for Filled Rounded Bullets (Matches About Us) --- */
+.pod-content-only .custom-list {
+    list-style-type: none;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.pod-content-only .custom-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #414141;
+}
+
+/* Creates the identical black, filled, clearly rounded bullets from about Us */
+.pod-content-only .custom-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px; 
+    width: 5px; 
+    height: 5px;
+    background-color: #333333; 
+    border-radius: 50%;
+}
+
+/* Call to Action spacing at the bottom */
+.pod-content-only .cta-section {
+    margin-top: 50px;
+}
+
+/* --- Scoped Styles for 1.html Only --- */
+
+.blog-article-one {
+    padding-bottom: 80px;
+    background-color: #fff;
+}
+
+.blog-article-one .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif
+}
+
+.blog-article-one .blog-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: none; /* Keeps it natural, not all-caps */
+}
+
+.blog-article-one .blog-meta-date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #999;
+    text-align: left;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+
+.blog-article-one .blog-body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Horizontal Fabric List Styling */
+.blog-article-one .fabric-item {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+}
+
+.blog-article-one .fabric-item img {
+    width: 100px; /* Specific size for thumbnails */
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+.blog-article-one .fabric-text {
+    flex: 1;
+}
+
+.blog-article-one .blog-footer-nav {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.blog-article-one .back-link {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.blog-article-one .back-link:hover {
+    color: #666;
+}
+
+/* Responsive adjustments strictly for this blog page */
+@media (max-width: 600px) {
+    .blog-article-one .blog-title {
+        font-size: 26px;
+    }
+    
+    .blog-article-one .fabric-item {
+        flex-direction: column; /* Stacks image above text on mobile */
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* --- Scoped Styles for 2.html Only --- */
+
+.blog-article-2 {
+    background-color: #ffffff;
+    padding: 40px 0 100px 0;
+    color: #444;
+}
+
+.blog-article-2 .blog-content-container {
+    max-width: 800px; /* Constrained width for readability */
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.blog-article-2 .blog-main-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+.blog-article-2 .article-title {
+    font-size: 36px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.blog-article-2 .article-date {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.blog-article-2 .article-body {
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.blog-article-2 .article-body h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #555;
+    margin: 35px 0 15px 0;
+}
+
+.blog-article-2 .article-body p {
+    margin-bottom: 20px;
+}
+
+.blog-article-2 .article-body ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.blog-article-2 .article-body li {
+    margin-bottom: 10px;
+}
+
+.blog-article-2 .blog-quote {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #333;
+    font-style: italic;
+    font-size: 18px;
+    color: #555;
+}
+
+.blog-article-2 .blog-footer-nav {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.blog-article-2 .back-link {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.blog-article-2 .back-link:hover {
+    color: #666;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .blog-article-2 .article-title {
+        font-size: 28px;
+    }
+    
+    .blog-article-2 .blog-content-container {
+        padding: 0 15px;
+    }
+}
+
+/* --- Privacy Policy Scoped Styles --- */
+
+.privacy-policy-content {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 60px 0;
+    line-height: 1.6;
+}
+
+.privacy-policy-content .content-wrapper {
+    max-width: 1020px; /* Requested Width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.privacy-policy-content .main-heading {
+    font-size: 35px; /* Requested Heading Size */
+    font-weight: 500;
+    color: #222222;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* 1. Remove the border from the container entirely */
+html body .privacy-policy-content div.meta-info {
+    border-bottom: none !important; 
+    padding-bottom: 0 !important;
+    margin-bottom: 30px !important;
+    text-align: center;
+}
+
+/* 2. General styling for both date lines */
+html body .privacy-policy-content div.meta-info p {
+    font-size: 12px !important;
+    color: #888 !important;
+    margin-bottom: 0 !important; /* Removes gap between the two dates */
+    line-height: 1.4 !important;
+    text-transform: none !important;
+    border: none !important;
+}
+
+/* 3. Apply the border ONLY to the second (last) date line */
+html body .privacy-policy-content div.meta-info p:last-child {
+    border-bottom: 1px solid #eeeeee !important; /* The line is back */
+    padding-bottom: 20px !important;            /* Space between line and text */
+    margin-bottom: 10px !important;            /* Space after the line */
+    display: inline-block;                     /* Ensures the line only spans the text width */
+    width: 100%;                               /* Change to 'auto' if you want a short line */
+}
+
+.privacy-policy-content .sub-heading {
+    font-size: 18px; /* Requested Sub-heading Size */
+    font-weight: 600;
+    color: #444444;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.privacy-policy-content p {
+    font-size: 16px; /* Requested Body Font Size */
+    margin-bottom: 20px;
+    font-weight: 300;
+    color: #555;
+}
+
+/* Custom list styling to match your brand style */
+.privacy-policy-content .custom-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.privacy-policy-content .custom-list li {
+    font-size: 16px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+    font-weight: 300;
+    color: #555;
+}
+
+.privacy-policy-content .custom-list li::before {
+    content: "•";
+    color: #222;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.privacy-policy-content .address-block {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.privacy-policy-content a {
+    color: #222;
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1020px) {
+    .privacy-policy-content .content-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .privacy-policy-content .main-heading {
+        font-size: 28px;
+    }
+    .privacy-policy-content .sub-heading {
+        font-size: 18px;
+    }
+}
+
+/* --- Terms and Conditions Scoped Styles (1020px) --- */
+
+html body .terms-conditions-content {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #ffffff;
+    padding: 60px 0;
+    color: #333333;
+}
+
+html body .terms-conditions-content .content-wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Heading Size - 35px */
+html body .terms-conditions-content h1.main-heading {
+    font-size: 35px !important;
+    font-weight: 500;
+    color: #222222;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Date Section Logic - Border only on the 2nd line */
+html body .terms-conditions-content div.meta-info {
+    margin-bottom: 40px !important;
+}
+
+html body .terms-conditions-content div.meta-info p {
+    font-size: 13px !important;
+    color: #888 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
+    text-align: center;
+}
+
+html body .terms-conditions-content div.meta-info p:last-child {
+    border-bottom: 1px solid #eeeeee !important;
+    padding-bottom: 20px !important;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Sub heading font size - 19px */
+html body .terms-conditions-content h2.sub-heading {
+    font-size: 19px !important;
+    font-weight: 600;
+    color: #444444;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+/* Font size - 16px for body and lists */
+html body .terms-conditions-content p, 
+html body .terms-conditions-content li,
+html body .terms-conditions-content .address-block {
+    font-size: 16px !important;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* List Styling */
+html body .terms-conditions-content .custom-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+html body .terms-conditions-content .custom-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+}
+
+html body .terms-conditions-content .custom-list li::before {
+    content: "•";
+    color: #222;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+html body .terms-conditions-content .address-block {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+html body .terms-conditions-content a {
+    color: #222;
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    html body .terms-conditions-content h1.main-heading { font-size: 28px !important; }
+    html body .terms-conditions-content h2.sub-heading { font-size: 18px !important; }
+}
+
+/* --- Disclaimer Scoped Styles (1020px) --- */
+
+html body .disclaimer-content {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #ffffff;
+    padding: 60px 0;
+    color: #333333;
+}
+
+html body .disclaimer-content .content-wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Heading Size - 35px */
+html body .disclaimer-content h1.main-heading {
+    font-size: 35px !important;
+    font-weight: 500;
+    color: #222222;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Date Section Logic - Border only on the 2nd line */
+html body .disclaimer-content div.meta-info {
+    margin-bottom: 40px !important;
+}
+
+html body .disclaimer-content div.meta-info p {
+    font-size: 13px !important;
+    color: #888 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
+    text-align: center;
+}
+
+html body .disclaimer-content div.meta-info p:last-child {
+    border-bottom: 1px solid #eeeeee !important;
+    padding-bottom: 20px !important;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Sub heading font size - 19px */
+html body .disclaimer-content h2.sub-heading {
+    font-size: 19px !important;
+    font-weight: 600;
+    color: #444444;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+/* Font size - 16px for body and lists */
+html body .disclaimer-content p, 
+html body .disclaimer-content li,
+html body .disclaimer-content .address-block {
+    font-size: 16px !important;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* List Styling */
+html body .disclaimer-content .custom-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+html body .disclaimer-content .custom-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+}
+
+html body .disclaimer-content .custom-list li::before {
+    content: "•";
+    color: #222;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+html body .disclaimer-content .address-block {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+html body .disclaimer-content a {
+    color: #222;
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    html body .disclaimer-content h1.main-heading { font-size: 28px !important; }
+    html body .disclaimer-content h2.sub-heading { font-size: 18px !important; }
+}
