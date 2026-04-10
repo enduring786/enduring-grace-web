@@ -186,24 +186,22 @@ body {
 .intro-section .intro-text {
     color: #555; /* Replace this hex code with your preferred color */0
 }
-/* --- Centered and Scaled What We Do Video (with subtle shadow) --- */
+/* --- Centered and Scaled YouTube Video (with subtle shadow) --- */
 .intro-section .video-placeholder {
     position: relative;
     width: 100%;
-    max-width: 700px; /* Reduced width to make the video box smaller */
-    margin: 0 auto 30px auto; /* "auto" left and right forces it to the screen center */
-    overflow: hidden;
-    border-radius: 8px; /* Smooth rounded corners */
-    background: #000; /* Black background fallback while loading */
-    cursor: pointer;
+    max-width: 700px; 
+    margin: 0 auto 30px auto; 
+    border-radius: 8px; 
+    background: #000; 
     
-    /* --- NEW: Subtle Shadow --- */
-    /* Horizontal offset (0px), Vertical offset (4px), Blur (12px), Spread (-8px) */
+    /* Maintains a 16:9 aspect ratio so the box doesn't collapse */
+    aspect-ratio: 16 / 9; 
+    
     box-shadow: 0 4px 12px -1px rgba(31, 31, 31, 0.466); 
-    
-    /* Optional: Improves rendering smoothness during hover/transition */
     will-change: box-shadow; 
     transition: box-shadow 0.2s ease;
+    overflow: hidden;
 }
 
 /* Subtle effect: Light shadow brightens slightly on hover */
@@ -211,14 +209,21 @@ body {
     box-shadow: 0 6px 16px -1px rgba(0, 0, 0, 0.2); 
 }
 
-.intro-section .video-placeholder video {
+/* --- UPDATED: Target the iframe instead of 'video' --- */
+.intro-section .video-placeholder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    border: none;
     display: block;
-    object-fit: cover; 
+    /* Scale slightly to hide YouTube's internal borders/UI if desired */
+    transform: scale(1.02); 
 }
 
-/* Play button floating perfectly centered over the video */
+/* Play button - I have kept this, but it will sit BEHIND the iframe 
+   interactions unless you want it just for visual decoration. */
 .intro-section .play-button {
     position: absolute;
     top: 50%;
@@ -235,11 +240,12 @@ body {
     align-items: center;
     font-size: 20px;
     transition: background 0.2s ease, transform 0.2s ease;
+    pointer-events: none; /* Allows clicks to pass through to the YouTube play button */
 }
 
 /* Subtle hover effect for the button */
 .intro-section .video-placeholder:hover .play-button {
-    background: rgba(255, 0, 0, 0.8); /* Turns YouTube red on hover */
+    background: rgba(255, 0, 0, 0.8); 
     transform: translate(-50%, -50%) scale(1.1);
 }
 
