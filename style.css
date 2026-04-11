@@ -2041,7 +2041,7 @@ html body .disclaimer-content a {
     display: inline-flex;
     align-items: center;
     gap: 12px; /* Space between icon and text */
-    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.233);
     transition: all 0.3s ease;
 }
 
@@ -2049,7 +2049,7 @@ html body .disclaimer-content a {
 .contact-details-section .wa-business-btn:hover {
     background-color: #1ebe57;
     transform: translateY(-3px);
-    box-shadow: 0 6px 10px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.288);
 }
 
 /* Icon Size */
