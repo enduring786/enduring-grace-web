@@ -888,7 +888,7 @@ body {
     /* Force the container to flip the order of its children */
     html body .pod-container {
         display: flex !important;
-        flex-direction: column-reverse !important; /* This pushes the 2nd child (image) to the top */
+        flex-direction: column-reverse  !important; /* This pushes the 2nd child (image) to the top */
         gap: 20px !important;
         align-items: center !important;
     }
