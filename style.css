@@ -216,7 +216,7 @@ body {
     border-bottom: 1px solid #ddd;
     box-shadow: 0 4px 7px -1px rgba(31, 31, 31, 0.466);
     }
-}
+}}
 
 /* --- Hero Section --- */
 .hero { 
@@ -1263,12 +1263,12 @@ body {
     margin: 5px 0;
 }
 
-1-page-only-line {
+.page-1-only-line {
     border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
     margin: 5px 0;
 }
 
-2-page-only-line {
+.page-2-only-line {
     border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
     margin: 5px 0;
 }
@@ -1282,7 +1282,6 @@ terms-only-line {
     border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
     margin: 5px 0;
 }
-
 
 
 /* --- Global Reset for the Wrapper --- */
@@ -2021,7 +2020,6 @@ html body .disclaimer-content a {
         margin: 25px auto !important;   /* Spacing above and below the text */
         display: block !important;
     }
-}
 
 
 /* Container to center the button */
@@ -2043,7 +2041,7 @@ html body .disclaimer-content a {
     display: inline-flex;
     align-items: center;
     gap: 12px; /* Space between icon and text */
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -2051,7 +2049,7 @@ html body .disclaimer-content a {
 .contact-details-section .wa-business-btn:hover {
     background-color: #1ebe57;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 6px 10px rgba(37, 211, 102, 0.4);
 }
 
 /* Icon Size */
