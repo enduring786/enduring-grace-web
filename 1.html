@@ -32,15 +32,25 @@
                 <img src="images/logo.png" alt="Enduring Grace Logo" class="brand-logo">
             </a>
         </div>
-        <nav class="nav-menu">
-            <ul>
-            <a href="index.html">Home</a>
-            <a href="egdiary.html">The EG Diary</a>
-            <a href="pod.html">Print On Demand</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>>
-            </ul>
-        </nav>
+        <nav class="nav-bar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="1.html">Services</a></li>
+        <li><a href="egdiary.html">The EG Diary</a></li>
+        <li><a href="pod.html">Print On Demand</a></li>
+        <li><a href="about.html">About Us</a></li>
+    </ul>
+</nav>
+
+<script>
+    /* This script toggles the 'active' class to slide the menu */
+    function toggleMenu() {
+        const nav = document.getElementById('nav-list');
+        nav.classList.toggle('active');
+    }
+</script>
         <div class="header-right"></div>
     </header>
 

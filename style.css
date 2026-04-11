@@ -18,7 +18,7 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 8px 40px; 
+    padding: 8px 90px; 
     font-size: 14px; 
     border-bottom: 1px solid #ddd; 
 }
@@ -184,7 +184,11 @@ body {
 
 /* --- Intro Video Section --- */
 .intro-section .intro-text {
-    color: #555; /* Replace this hex code with your preferred color */0
+    color: #555; /* Replace this hex code with your preferred color */
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
 }
 /* --- Centered and Scaled YouTube Video (with subtle shadow) --- */
 .intro-section .video-placeholder {
@@ -329,6 +333,7 @@ summary::-webkit-details-marker {
     margin: 0;
 }
 
+
 /* --- Products Grid Section --- */
 .products-section {
     padding: 60px 0;
@@ -413,12 +418,14 @@ summary::-webkit-details-marker {
         flex-wrap: wrap;
     }
     .hero-content h1 {
-        font-size: 32px;
+        font-size: 15px;
     }
     .products-grid {
         grid-template-columns: 1fr; 
     }
 }
+
+
 /* --- Global Reset & Fonts --- */
 * {
     margin: 0;
@@ -1849,8 +1856,97 @@ html body .disclaimer-content a {
     text-decoration: underline;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    html body .disclaimer-content h1.main-heading { font-size: 28px !important; }
-    html body .disclaimer-content h2.sub-heading { font-size: 18px !important; }
+
+
+/* --- Desktop Navigation --- */
+.menu-toggle {
+    display: none;
 }
+
+.nav-bar ul {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px; /* Spacing only on desktop */
+}
+
+/* Remove underlines from desktop links */
+.nav-bar ul li a {
+    text-decoration: none; 
+    color: #555; 
+    font-size: 14px; 
+    position: relative; 
+    padding-bottom: 5px; 
+    white-space: nowrap; /* CRITICAL: This stops multi-word links from wrapping */
+    display: inline-block;
+}
+
+/* --- Mobile Navigation (768px and below) --- */
+@media (max-width: 768px) {
+    
+    .top-bar .social-icons {
+        display: none !important;
+    }
+
+    /* Mobile Sidebar Container */
+    .nav-bar ul {
+        display: none !important;
+        flex-direction: column !important;
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        background: #ffffff;
+        width: 260px;
+        height: 100vh;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 9999;
+        padding: 80px 30px;
+        transition: 0.3s right ease-in-out;
+        gap: 0 !important;
+    }
+
+    .nav-bar ul.active {
+        display: flex !important;
+        right: 0; 
+    }
+
+    .nav-bar ul li {
+        margin-bottom: 25px;
+        list-style: none;
+    }
+
+    /* Sidebar Links styling */
+    .nav-bar ul li a {
+        text-decoration: none !important;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        display: block;
+    }
+
+    /* Hamburger Menu: Forced to the left */
+    .menu-toggle {
+        display: block !important; 
+        font-size: 32px;
+        cursor: pointer;
+        color: #333;
+        position: absolute; /* Absolute positioning ensures it ignores other elements */
+        left: 40px; 
+        top: 8px;
+        z-index: 1000;
+    }
+
+/* Control the <p class="intro-text"> specifically for mobile */
+    .intro-section p.intro-text {
+        font-size: 16px !important;    /* Adjust mobile size here */
+        line-height: 1.8 !important;    /* Adjust spacing for readability */
+        text-align: center !important;  /* Centers text on phone screens */
+        padding: 0 20px !important;     /* Prevents text from touching the edges */
+        margin: 25px auto !important;   /* Spacing above and below the text */
+        display: block !important;
+    }
+}
+
+

@@ -35,15 +35,24 @@
             </a>
         </div>
 
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="egdiary.html">The EG Diary</a></li>
-                <li><a href="pod.html">Print On Demand (POD)</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </nav>
+<nav class="nav-bar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="egdiary.html">The EG Diary</a></li>
+        <li><a href="pod.html">Print On Demand</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+    </ul>
+</nav>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('nav-list');
+        nav.classList.toggle('active');
+    }
+</script>
 
         <div class="header-right"></div>
     </header>
@@ -78,6 +87,7 @@
 </div>
     
     <p class="intro-text">We at Enduring Grace offer customization solutions for various clients <br> wanting customized t-shirts, hoodies, sweatshirts, caps, etc. <br> <br> We offer good quality products and service at competitive prices. <br> We accept orders for minimum of 20 pieces and can <br> handle orders for 5,000+ pieces as well </p>
+
 </section>
 <script>
     const videoWrapper = document.getElementById('videoWrapper');
