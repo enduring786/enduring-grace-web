@@ -35,15 +35,25 @@
             </a>
         </div>
 
-        <nav class="nav-menu">
-            <ul>
+        <nav class="nav-bar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <ul id="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="egdiary.html">The EG Diary</a></li>
                 <li><a href="pod.html">Print On Demand (POD)</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="about.html">About Us</a></li>
-            </ul>
-        </nav>
+
+    </ul>
+</nav>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('nav-list');
+        nav.classList.toggle('active');
+    }
+</script>
 
         <div class="header-right"></div>
     </header>

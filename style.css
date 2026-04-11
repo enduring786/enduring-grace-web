@@ -882,6 +882,51 @@ body {
     background-color: #333333;
 }
 
+/* --- Mobile Specific: Print On Demand Image-First Logic --- */
+@media (max-width: 768px) {
+
+    /* Force the container to flip the order of its children */
+    html body .pod-container {
+        display: flex !important;
+        flex-direction: column-reverse !important; /* This pushes the 2nd child (image) to the top */
+        gap: 20px !important;
+        align-items: center !important;
+    }
+
+    /* Ensure the image container takes full width */
+    html body .pod-image {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    html body .pod-image img {
+        width: 100% !important;
+        max-width: 400px; /* Adjust to keep image from getting too huge */
+        height: auto !important;
+        border-radius: 8px;
+    }
+
+    /* Center the text and button below the image */
+    html body .pod-content {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0 15px !important;
+    }
+
+    html body .pod-content h2 {
+        font-size: 24px !important;
+        margin-top: 10px !important;
+    }
+
+    html body .pod-content .know-more-btn {
+        margin: 20px auto 0 !important;
+        display: inline-block !important;
+    }
+}
+
+
+
 
 /* --- Clean Site Footer --- */
 .custom-site-footer {
@@ -1883,6 +1928,21 @@ html body .disclaimer-content a {
     display: inline-block;
 }
 
+.nav-bar ul li a:hover::after { 
+    width: 100%; 
+}
+
+.nav-bar ul li a::after { 
+    content: ''; 
+    position: absolute; 
+    width: 0; 
+    height: 2px; 
+    bottom: 0; 
+    left: 0; 
+    background: #111; 
+    transition: 0.3s; 
+}
+
 /* --- Mobile Navigation (768px and below) --- */
 @media (max-width: 768px) {
     
@@ -1948,5 +2008,3 @@ html body .disclaimer-content a {
         display: block !important;
     }
 }
-
-
