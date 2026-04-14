@@ -304,7 +304,7 @@
     .nav-bar ul li {
         margin-bottom: 25px;
         list-style: none;
-    }
+    }}
 
     /* Sidebar Links styling */
     .nav-bar ul li a {
@@ -325,4 +325,50 @@
         left: 40px; 
         top: 9px;
         z-index: 1000;
-    }}
+    }
+    /* Mobile Adjustments */
+@media (max-width: 768px) {
+    .wa-business-btn {
+        width: 90%; /* Makes it easier to tap on phones */
+        justify-content: center;
+        padding: 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.233);
+        transition: all 0.3s ease;
+    }
+}
+
+
+.whatsapp-float {
+    position: fixed !important; /* Ensures it floats over everything */
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; 
+    color: white !important;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 99999; /* Higher than your nav and footer */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Ensure visibility on Mobile */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
