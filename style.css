@@ -2104,3 +2104,135 @@ html body .disclaimer-content a {
         font-size: 25px;
     }
 }
+
+/* --- Global Resets & Typography --- */
+.blog-catalog-wrapper *, 
+.internal-blog-wrapper *, 
+
+
+/* Master wrappers matching your established site styling */
+.blog-catalog-wrapper, 
+.internal-blog-wrapper {
+    background-color: #ffffff;
+    color: #707070; 
+    line-height: 1.8;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.content-wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.main-heading {
+    font-size: 34px;
+    font-weight: 500;
+    color: #222222;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+/* Centralized thin upper banner bar */
+.blog-top-bar {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- Catalog Grid Layout (For egdiary.html) --- */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns like standard news feeds */
+    gap: 80px;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-thumbnail img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Crops image neatly into the rectangle */
+    border: 1px solid #e0e0e0;
+    padding: 5px;
+}
+
+.blog-card-content {
+    padding-top: 15px;
+}
+
+.blog-date, .blog-publish-date {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.blog-card-title {
+    font-size: 22px;
+    color: #333;
+    font-weight: 500;
+    margin: 5px 0 10px 0;
+    line-height: 1.4;
+}
+
+.read-more-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #222;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* --- Internal Post Layout (For 1.html) --- */
+.blog-breadcrumbs {
+    margin-bottom: 25px;
+}
+
+.blog-breadcrumbs a {
+    text-decoration: none;
+    color: #707070;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.blog-breadcrumbs a:hover {
+    color: #111;
+}
+
+.blog-featured-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 35px;
+    border: 1px solid #e0e0e0;
+    padding: 6px;
+}
+
+.blog-body-text h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 35px 0 10px 0;
+    font-weight: 600;
+}
+
+.blog-body-text p {
+    margin-bottom: 22px;
+}
+
+.blog-footer-nav {
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.blog-footer-nav a {
+    color: #333;
+    text-decoration: underline;
+}
