@@ -1278,12 +1278,17 @@ body {
     margin: 5px 0;
 }
 
-privacy-only-line {
+.terms-page-only-line {
     border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
     margin: 5px 0;
 }
 
-terms-only-line {
+.privacy-policy-page-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+
+.disclaimer-page-only-line {
     border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
     margin: 5px 0;
 }
