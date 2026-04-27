@@ -1273,6 +1273,11 @@ body {
     margin: 5px 0;
 }
 
+.page-3-only-line {
+    border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
+    margin: 5px 0;
+}
+
 privacy-only-line {
     border-bottom: 2px solid #dddddd; /* Or whatever your line style is */
     margin: 5px 0;
@@ -2227,15 +2232,8 @@ html body .disclaimer-content a {
     margin-bottom: 22px;
 }
 
-.blog-footer-nav {
-    margin-top: 50px;
-    padding-top: 20px;
-}
 
-.blog-footer-nav a {
-    color: #333;
-    text-decoration: underline;
-}
+
 /* --- Mobile Responsiveness --- */
 @media (max-width: 700px) {
     .blog-grid {
@@ -2256,5 +2254,90 @@ html body .disclaimer-content a {
     
     .footer-legal-container {
         justify-content: center;
+    }
+}
+
+/* --- Styling Specific to 3rd Blog Article --- */
+
+.blog-article-three {
+    padding-bottom: 80px;
+    background-color: #fff;
+}
+
+.blog-article-three .content-wrapper {
+    max-width: 800px; /* Same as your 1st blog */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.blog-article-three .blog-title {
+    font-size: 36px;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.blog-article-three .blog-meta-date {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.blog-article-three .blog-breadcrumbs a {
+    text-decoration: none;
+    color: #707070;
+    font-size: 13px;
+}
+
+.blog-article-three .blog-body {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Row setup for floating images */
+.blog-article-three .blog-row {
+    margin-bottom: 25px;
+    overflow: hidden; /* Ensures rows don't overlap */
+}
+
+.blog-article-three .blog-float-img {
+    float: left;
+    width: 250px; /* Adjust size for your preference */
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 5px;
+}
+
+.blog-article-three p {
+    margin-bottom: 20px;
+}
+
+.blog-article-three .blog-footer-nav {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.blog-article-three .back-link {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .blog-article-three .blog-float-img {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 }
