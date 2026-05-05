@@ -2393,15 +2393,27 @@ html body .disclaimer-content a {
     line-height: 1.8;
 }
 
+/* Updated Image Styling with Top Padding */
+.blog-article-four .method-image {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 30px; /* Increased top padding */
+    margin-bottom: 2px;
+    border: 1px solid #eee;
+}
+
 .blog-article-four h3 {
     color: #222;
     font-weight: 600;
-    margin-top: 35px;
+    margin-top: 15px;
     margin-bottom: 15px;
 }
 
 .blog-article-four .method-section {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .blog-article-four .recommended-for {
@@ -2471,26 +2483,14 @@ html body .disclaimer-content a {
     font-weight: 500;
 }
 
-/* Row setup for floating images */
-.blog-article-three .blog-row {
-    margin-bottom: 25px;
-    overflow: hidden; /* Ensures rows don't overlap */
-}
-
-.blog-article-four .blog-float-img {
-    float: left;
-    width: 250px; /* Adjust size for your preference */
-    height: auto;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    border: 1px solid #e0e0e0;
-    padding: 5px;
-}
-
-
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .blog-article-four .blog-title {
         font-size: 28px;
+    }
+    
+    .blog-article-four .method-image {
+        max-height: 300px;
+        padding-top: 20px; /* Slightly less on mobile */
     }
 }
