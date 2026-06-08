@@ -2749,3 +2749,406 @@ html body .disclaimer-content a {
         padding: 20px;
     }
 }
+
+
+
+/* --- Styling Specific to 6th Blog Article (GSM Guide) --- */
+
+.blog-article-six {
+    padding-bottom: 80px;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.blog-article-six .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-article-six .blog-breadcrumbs a {
+    text-decoration: none;
+    color: #707070;
+    font-size: 13px;
+}
+
+.blog-article-six .blog-title {
+    font-size: 34px;
+    color: #222;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    line-height: 1.3;
+}
+
+.blog-article-six .blog-subtitle {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.blog-article-six .blog-meta-date {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.blog-article-six .blog-body {
+    font-size: 15px;
+    color: #555; /* Established body text color from blog 3 */
+    line-height: 1.8;
+}
+
+.blog-article-six .blog-body p {
+    margin-bottom: 20px;
+}
+
+/* Sections */
+.blog-article-six .guide-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.blog-article-six .guide-section h2 {
+    font-size: 22px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Image Presentation with Top Spacing Margin Fix */
+.blog-article-six .blog-image-wrapper {
+    margin: 35px 0;
+}
+
+.blog-article-six .gsm-image {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    margin-top: 10px;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.171);
+}
+
+/* Tier Cards layout */
+.blog-article-six .tier-card {
+    background-color: #fafafa;
+    border: 1px solid #f0f0f0;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.blog-article-six .tier-card h3 {
+    font-size: 16px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.blog-article-six .tier-card p {
+    margin-bottom: 0;
+}
+
+.blog-article-six .tier-card .tier-risk {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    border-left: 2px solid #ddd;
+    padding-left: 12px;
+}
+
+/* Decoration Rules */
+.blog-article-six .decoration-rule {
+    margin-bottom: 20px;
+}
+
+.blog-article-six .decoration-rule h4 {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Procurement Checklist with Black Line Bullets */
+.blog-article-six .checklist-box {
+    background-color: #fcfcfc;
+    border: 1px solid #efefef;
+    padding: 35px;
+    margin: 45px 0;
+    border-radius: 8px;
+}
+
+.blog-article-six .checklist-box h2 {
+    margin-top: 0;
+    color: #222;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.blog-article-six .checklist-intro {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.blog-article-six .checklist-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.blog-article-six .checklist-item {
+    padding-left: 20px;
+    border-left: 3px solid #00218b; /* Black line bullet style matching user preference */
+}
+
+.blog-article-six .checklist-item p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.9;
+}
+
+/* Summary Box Styling */
+.blog-article-six .summary-architecture {
+    background-color: #001147;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 45px;
+}
+
+.blog-article-six .summary-architecture h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.blog-article-six .summary-architecture ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.blog-article-six .summary-architecture li {
+    font-size: 14.5px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.blog-article-six .summary-architecture li:last-child {
+    margin-bottom: 0;
+}
+
+.blog-article-six .summary-architecture li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+.blog-article-six .summary-architecture strong {
+    color: #fff;
+}
+
+/* Footer Elements */
+.blog-article-six .blog-footer-nav {
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.blog-article-six .back-link {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.blog-article-six .guide-section .header-tier {
+    padding-left: 20px;
+    /* This creates the black line bullet style */
+    border-left: 3px solid #0#00218b;
+}
+
+/* --- Styling Specific to 6th Blog Article (Page 2 Exact Match) --- */
+
+.blog-article-six-page-2 {
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-article-six-page-2 .guide-section {
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+
+.blog-article-six-page-2 .guide-section h2 {
+    font-size: 22px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.blog-article-six-page-2 p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Modern & Sleek Matrix Table Design */
+.blog-article-six-page-2 .table-container {
+    overflow-x: auto;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+}
+
+.blog-article-six-page-2 .matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    min-width: 650px;
+}
+
+.blog-article-six-page-2 .matrix-table th {
+    background-color: #001147;
+    color: #fff;
+    font-weight: 500;
+    text-align: left;
+    padding: 16px 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.blog-article-six-page-2 .matrix-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    vertical-align: top;
+}
+
+.blog-article-six-page-2 .matrix-table tr:last-child td {
+    border-bottom: none;
+}
+
+.blog-article-six-page-2 .matrix-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Strategic Insider Box - Using Left Margin Bullet Border Style */
+.blog-article-six-page-2 .insider-insight-box {
+    background-color: #fcfcfc;
+    border: 1px solid #efefef;
+    padding: 25px 30px;
+    margin: 40px 0;
+    border-radius: 6px;
+    border-left: 4px solid #00218b; /* Clean black indicator line */
+}
+
+.blog-article-six-page-2 .insider-insight-box p {
+    margin: 0;
+    font-size: 14.5px;
+    color: #555;
+    line-height: 1.9;
+}
+
+.blog-article-six-page-2 .insider-insight-box strong {
+    color: #222;
+}
+
+/* Printing Compatibility Section Layout */
+.blog-article-six-page-2 .compatibility-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blog-article-six-page-2 .compatibility-item p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.blog-article-six-page-2 .compatibility-item strong {
+    color: #222;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .blog-article-six-page-2 .insider-insight-box {
+        padding: 20px;
+    }
+}
+
+/* --- Image styling following "What Exactly is GSM?" --- */
+
+.blog-article-six-page-2 .blog-image-block,
+.blog-article-six .blog-image-block {
+    margin-top: 30px;    /* Pushes the entire container cleanly down away from the text */
+    margin-bottom: 35px; /* Provides separation from the content coming up below */
+    width: 100%;
+}
+
+.blog-article-six-page-2 .gsm-section-image,
+.blog-article-six .gsm-section-image {
+    width: 60%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #eee; /* Light clean frame wrapped directly on the image boundaries */
+    display: block;
+    
+    /* THE ADDITION: Modern, soft drop shadow */
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.171);
+}
+
+/* Responsive adjustment for compact screens */
+@media (max-width: 600px) {
+    .blog-article-six-page-2 .blog-image-block,
+    .blog-article-six .blog-image-block {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    .blog-article-six-page-2 .gsm-section-image,
+    .blog-article-six .gsm-section-image {
+        max-height: 300px;
+    }
+}
+
+/* Responsive Overrides */
+/* Responsive adjustment for compact screens */
+@media (max-width: 600px) {
+    .blog-article-six-page-2 .blog-image-block,
+    .blog-article-six .blog-image-block {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    .blog-article-six-page-2 .gsm-section-image,
+    .blog-article-six .gsm-section-image {
+        max-height: 300px;
+        /* Slightly tighter shadow for smaller presentation views */
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06); 
+    }
+}
